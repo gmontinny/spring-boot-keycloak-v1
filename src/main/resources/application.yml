@@ -4,12 +4,8 @@ server:
 spring:
   application:
     name: security
+  security:
     oauth2:
       resourceserver:
-        jwt.issuer-uri: http://localhost:8080/auth/realms/security-api
-
-  keycloak:
-    realm: web-app
-    auth-server-url: http://localhost:8080/auth/
-    resource: web-app
-    public-client: true
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/security-api
